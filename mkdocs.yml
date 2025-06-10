@@ -1,14 +1,43 @@
 
 site_name: Bdathe-Wiki
+site_url: https://wiki.bdathe.top
+site_author: LiuBiao
+site_description: Bdathe's wiki
+
+# Navigtion
+nav:
+  - AboutMe:
+    - AboutMe/index.md
+  - Blog:
+    - Blog/index.md
+    - Blog/test1.md
+
 theme:
-  name: material  # 主题
-  language: zh    # 语言
+  # 主题
+  name: material  
+  # 语言
+  language: zh    
   font:   
-    code: Inconsolata    # 代码字体
+    # 代码字体
+    code: Inconsolata    
   icon:     
-    logo: fontawesome/solid/cow  # 主题图标 
-  features:      
-    - content.code.copy  # 代码块复制
+    # 主题图标 
+    logo: fontawesome/solid/cow 
+  features:
+    # 使用 Tab 来进行分类
+    - navigation.tabs
+    # 返回顶部的按钮，在上滑时出现
+    - navigation.top
+    # 给每个 Tab 添加一个 index.md，且在点击 Tab 时打开
+    - navigation.indexes
+    # 打开 Tab 时左侧目录全部展开
+    - navigation.expand
+    # 搜索输入一些字母时推荐补全整个单词
+    - search.suggest
+    # 搜索的关键词文章加入高亮
+    - search.highlight
+    # 可以通过按钮复制代码
+    - content.code.copy
   palette:
     # Dark Mode
     - scheme: slate
