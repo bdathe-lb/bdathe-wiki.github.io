@@ -1,0 +1,93 @@
+
+site_name: Bdathe-Wiki
+theme:
+  name: material  # 主题
+  language: zh    # 语言
+  font:   
+    code: Inconsolata    # 代码字体
+  icon:     
+    logo: fontawesome/solid/cow  # 主题图标 
+  features:      
+    - content.code.copy  # 代码块复制
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Dark mode
+      primary: indigo
+      
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Light mode
+      primary: light blue
+
+plugins:
+  # 搜索功能
+  - search:
+      lang:
+        - zh
+        - en
+  # 给单篇文章添加标签
+  - tags
+
+markdown_extensions:
+  # 支持下划线、高亮、删除线、键盘
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  # 支持表格
+  - tables
+  # 数学公式支持
+  - pymdownx.arithmatex:
+      generic: true
+  # 图片功能支持，图片语法后面添加 {width="300"} 设置大小
+  - attr_list
+  # Markdown 支持 html
+  - md_in_html
+  # 语法高亮支持
+  - pymdownx.highlight:
+      # 显示行号
+      linenums: true
+      # 显示编程语言名称
+      auto_title: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # mermaid 渲染支持
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # emoji 支持
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # 支持代码分块
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Markdown 提示
+  - admonition
+  - pymdownx.details
+
+# 数学公式 - Latex语法
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# 社交链接
+extra:
+  social:
+    - name: Github | Bdathe
+      icon: simple/github
+      link: https://github.com/bdathe-lb?tab=repositories
+    - name: Email | bdathe@outlook.com
+      icon: material/email
+
+copyright: Copyright &copy; 2025 Liu
